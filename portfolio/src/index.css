@@ -1,10 +1,17 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; */
+  font-family: "Space Mono", Arial, serif;
+  font-family: "Space Mono", Arial, serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4d4d4d;
+  background: #fff;
 }
 
 code {

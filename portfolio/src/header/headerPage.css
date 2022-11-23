@@ -1,0 +1,131 @@
+#page {
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+header {
+  background-image: url("./../assets/imgs/cover_bg_3.jpg");
+  height: 801px;
+  background-position: 0px 0px;
+}
+.container {
+  background-color: transparent;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  /* height: 600px; */
+  width: 100%;
+  /* height: 722px; */
+  background-position: 0px 0px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 144, 0, 0.9);
+}
+.container .display-t {
+  width: 100%;
+  display: table;
+}
+.content {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+  display: table-cell;
+  vertical-align: middle;
+}
+.profile {
+  background-image: url("./../assets/imgs/user-3.jpg");
+  background-size: cover !important;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 200px;
+  width: 200px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+.display {
+  display: table-cell;
+  vertical-align: middle;
+  height: 722px;
+}
+.table {
+  width: 100%;
+  display: table;
+  height: 722px;
+}
+h1 {
+  font-family: "Kaushan Script", cursive;
+  margin-bottom: 30px;
+  font-size: 50px;
+  line-height: 1.3;
+  font-weight: 300;
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+span {
+  padding: 4px 15px;
+  position: relative;
+}
+h3 {
+  color: white;
+  font-family: "Space Mono", Arial, serif;
+  font-weight: 400;
+  /* margin: 0; */
+  padding: 0;
+  font-size: 24px;
+}
+p{
+  margin-bottom: 30px;
+  margin: 0 0 10px;
+}
+ul {
+  /* position: absolute; */
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  /* background: #ff9000; */
+  text-align: center;
+}
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  color: #fff;
+  /* background: #ff9000; */
+}
+a{
+  /* color: white; */
+  color: #fff;
+
+  background-color: transparent;
+  text-decoration: none;
+}
