@@ -24,11 +24,28 @@ class HeaderPage extends Component {
                   {" "}
                   <span>Web developer / mobile developer</span>
                 </h3>
-                <p></p><ul>
-                <li><a href="#"><i className="icon-twitter2"></i></a></li>
-									<li><a href="#"><i className="icon-facebook2"></i></a></li>
-									<li><a href="#"><i className="icon-linkedin2"></i></a></li>
-									<li><a href="#"><i className="icon-dribbble2"></i></a></li>
+                <p></p>
+                <ul className="icon-container">
+                  <li className="icon">
+                    <a href="#">
+                      <i className="icon-twitter2"></i>
+                    </a>
+                  </li>
+                  <li className="icon">
+                    <a href="#">
+                      <i className="icon-facebook2"></i>
+                    </a>
+                  </li>
+                  <li className="icon">
+                    <a href="#">
+                      <i className="icon-linkedin2"></i>
+                    </a>
+                  </li>
+                  <li className="icon">
+                    <a href="#">
+                      <i className="icon-dribbble2"></i>
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>

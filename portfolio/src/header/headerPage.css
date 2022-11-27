@@ -99,11 +99,11 @@ h3 {
   padding: 0;
   font-size: 24px;
 }
-p{
+p {
   margin-bottom: 30px;
   margin: 0 0 10px;
 }
-ul {
+.icon-container {
   /* position: absolute; */
   margin: 0;
   padding: 0;
@@ -111,7 +111,7 @@ ul {
   /* background: #ff9000; */
   text-align: center;
 }
-li {
+.icon {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -122,7 +122,7 @@ li {
   color: #fff;
   /* background: #ff9000; */
 }
-a{
+a {
   /* color: white; */
   color: #fff;
 
