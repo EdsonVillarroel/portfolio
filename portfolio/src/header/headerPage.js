@@ -1,10 +1,15 @@
 import React, { Component } from "react";
 import "./headerPage.css";
-// import "./../icomoon.css";
-import facebook from "../assets/icons/facebook.svg";
-import twitter from "../assets/icons/twitter.svg";
-import github from "../assets/icons/github.svg";
-import linkedin from "../assets/icons/linkedin.svg";
+import { FaBeer } from "react-icons/fa";
+import {
+  FaFacebookSquare,
+  FaLinkedin,
+  FaTwitter,
+  FaGithub,
+  FaInstagram,
+  FaBriefcase
+} from 'react-icons/fa';
+
 
 class HeaderPage extends Component {
   render() {
@@ -27,23 +32,30 @@ class HeaderPage extends Component {
                 <p></p>
                 <ul className="icon-container">
                   <li className="icon">
-                    <a href="#">
-                      <i className="icon-twitter2"></i>
+                  <FaFacebookSquare color="white" size={'2rem'} />
+                  </li>
+                  <li className="icon">
+                    <a href="www.facebook.com">
+                    <FaLinkedin color="white" size={'2rem'} />
+
                     </a>
                   </li>
                   <li className="icon">
-                    <a href="#">
-                      <i className="icon-facebook2"></i>
+                    <a href="www.facebook.com">
+                    <FaTwitter color="white" size={'2rem'} />
+
                     </a>
                   </li>
                   <li className="icon">
-                    <a href="#">
-                      <i className="icon-linkedin2"></i>
+                    <a href="www.facebook.com">
+                    <FaInstagram color="white" size={'2rem'} />
+
                     </a>
                   </li>
                   <li className="icon">
-                    <a href="#">
-                      <i className="icon-dribbble2"></i>
+                    <a href="www.facebook.com">
+                    <FaGithub color="white" size={'2rem'} />
+
                     </a>
                   </li>
                 </ul>
