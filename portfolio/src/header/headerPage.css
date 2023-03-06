@@ -8,7 +8,7 @@
   -o-transition: 0.5s;
   transition: 0.5s;
 }
-header {
+.header {
   background-image: url("./../assets/imgs/cover_bg_3.jpg");
   height: 801px;
   background-position: 0px 0px;
@@ -19,7 +19,7 @@ header {
   background-attachment: fixed;
   position: relative;
   /* width: calc((var(--vh, 1vh) * 100) - 22.5rem); */
-  width: 105% !important;
+  width: 100% !important;
   background-position: 0px 0px;
   height: calc((var(--vh, 1vh) * 100) - -1.5rem);
   overflow: hidden;
@@ -121,9 +121,12 @@ p {
   padding-right: 8rem; */
   width: 100% !important;
 }
+
+
+
 .icon {
   margin: 0;
-  padding: 0;
+  padding: 5px;
   list-style: none;
   display: -moz-inline-stack;
   display: inline-block;

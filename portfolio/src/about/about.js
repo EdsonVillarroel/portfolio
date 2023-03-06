@@ -5,13 +5,13 @@ class About extends Component {
   render() {
     return (
       <div className="container-about">
-        <div className="row">
+        <div className="container-title">
           <div className="title">
             <h2 className="about-title">About Me</h2>
           </div>
         </div>
         <div className="row">
-          <div className="container-info">
+          <div className="container-personal-info">
             <ul className="info">
               <li className="personal-data">
                 <span className="first-block span">Full Name:</span>
