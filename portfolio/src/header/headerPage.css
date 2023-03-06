@@ -63,6 +63,12 @@
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   border-radius: 50%;
+  margin-top: 10rem;
+}
+@media (max-width: 600px) {
+  .profile{
+    margin-top: 0rem;
+  }
 }
 .display {
   display: table-cell;
@@ -72,7 +78,7 @@
 .table {
   width: 100%;
   display: table;
-  height: 722px;
+  height: 100px;
 }
 h1 {
   font-family: "Kaushan Script", cursive;
