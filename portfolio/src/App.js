@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import HeaderPage from "./header/headerPage";
 import About from "./about/about";
 import WorkExperience from "work-experience/workExperience";
+import  MyServices from "my-services/myServices";
 class App extends Component {
   render() {
     return (
@@ -10,6 +11,7 @@ class App extends Component {
         <HeaderPage></HeaderPage>
         <About></About>
         <WorkExperience></WorkExperience>
+        <MyServices></MyServices>
       </div>
     );
   }
