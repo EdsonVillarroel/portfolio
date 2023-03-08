@@ -9,8 +9,8 @@ class workExperience extends Component {
         <div className="title-work-experience">My Resume</div>
         <div>
           <div className="container-experience">
-            <ul className="time-line">
-              <li>
+            <ul className="timeline">
+              <li className="timeline-heading">
                 <div className="title-experience">
                   <h3>Work Experience</h3>
                 </div>
