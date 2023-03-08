@@ -31,7 +31,9 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(255, 144, 0, 0.9);
+  /* background: rgba(255, 144, 0, 0.9); */
+  background: linear-gradient(rgba(255, 144, 0, 0.9), white);
+
 }
 .container .display-t {
   width: 100%;
@@ -96,11 +98,11 @@ h1 {
   color: white;
   width: 100%;
 }
-span {
+.span-text {
   padding: 4px 15px;
   position: relative;
 }
-h3 {
+.h3-text {
   color: white;
   font-family: "Space Mono", Arial, serif;
   font-weight: 400;

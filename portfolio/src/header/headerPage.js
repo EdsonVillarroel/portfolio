@@ -22,11 +22,11 @@ class HeaderPage extends Component {
               <div className="display">
                 <div className="profile"></div>
                 <h1>
-                  <span>-Edson Villarroel Ricaldes-</span>
+                  <span className="span-text">-Edson Villarroel Ricaldes-</span>
                 </h1>
-                <h3>
+                <h3 className="h3-text">
                   {" "}
-                  <span>Web developer / mobile developer</span>
+                  <span className="span-text">Web developer / mobile developer</span>
                 </h3>
                 <p></p>
                 <ul className="icon-container">

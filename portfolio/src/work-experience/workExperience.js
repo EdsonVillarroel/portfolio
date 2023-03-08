@@ -6,18 +6,18 @@ class workExperience extends Component {
   render() {
     return (
       <div>
-        <div className="title-work-experience">My Resume</div>
+        <div className="title-work-experience"><h3>My Resume</h3></div>
         <div>
           <div className="container-experience">
             <ul className="timeline">
               <li className="timeline-heading">
-                <div className="title-experience">
+                <div>
                   <h3>Work Experience</h3>
                 </div>
               </li>
               <li className="animate-box timeline-unverted">
                 <div className="timeline-badge">
-                  <FaBriefcase color="red" size={"2rem"} />
+                  <FaBriefcase color="white" size={"2rem"} />
                 </div>
                 <div className="timeline-panel">
                   <div className="timeline-heading">
@@ -37,9 +37,9 @@ class workExperience extends Component {
               </li>
               <li className="timeline-inverted animate-box">
                 <div className="timeline-badge">
-                  <FaBriefcase color="red" size={"2rem"} />
+                  <FaBriefcase color="white" size={"2rem"} />
                 </div>
-                <div className="timeline-panel">
+                <div className="timeline-panel text-start">
                   <div className="timeline-heading">
                     <h3 className="timeline-title">Junior Developer</h3>
                     <span className="company">Company Name - 2013 - 2015</span>
@@ -55,7 +55,7 @@ class workExperience extends Component {
               </li>
               <li className="animate-box timeline-unverted">
                 <div className="timeline-badge">
-                  <FaBriefcase color="red" size={"2rem"} />
+                  <FaBriefcase color="white" size={"2rem"} />
                 </div>
                 <div className="timeline-panel">
                   <div className="timeline-heading">
@@ -76,8 +76,8 @@ class workExperience extends Component {
 
               {/* <li class="timeline-heading text-center animate-box">
 							<div><h3>Education</h3></div>
-						</li> */}
-              {/* <li class="timeline-inverted animate-box">
+						</li>
+              <li class="timeline-inverted animate-box">
 							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
