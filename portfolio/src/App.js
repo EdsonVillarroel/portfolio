@@ -4,6 +4,7 @@ import HeaderPage from "./header/headerPage";
 import About from "./about/about";
 import WorkExperience from "work-experience/workExperience";
 import  MyServices from "my-services/myServices";
+import Skills from "skills/skills"
 class App extends Component {
   render() {
     return (
@@ -12,6 +13,7 @@ class App extends Component {
         <About></About>
         <WorkExperience></WorkExperience>
         <MyServices></MyServices>
+        <Skills></Skills>
       </div>
     );
   }
