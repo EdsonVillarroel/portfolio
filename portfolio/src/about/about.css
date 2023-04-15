@@ -89,10 +89,9 @@
 }
 .info {
   margin: 0;
-  padding: 0;
+  padding: 20px;
   /* width: 100%; */
   margin: 0;
-  padding: 0;
   /* width: 90%; */
 }
 .first-block {
@@ -108,7 +107,7 @@
   color: rgba(0, 0, 0, 0.5);
   /* text-align: left; */
   width: 60%;
-  font-size: 20px;
+  font-size: 15px;
 }
 .title-hello {
   color: #000;
