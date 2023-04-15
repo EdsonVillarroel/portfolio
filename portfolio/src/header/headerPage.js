@@ -1,39 +1,69 @@
 import React, { Component } from "react";
 import "./headerPage.css";
-// import "./../icomoon.css";
-import facebook from "../assets/icons/facebook.svg";
-import twitter from "../assets/icons/twitter.svg";
-import github from "../assets/icons/github.svg";
-import linkedin from "../assets/icons/linkedin.svg";
+// import { FaBeer } from "react-icons/fa";
+import {
+  FaFacebookSquare,
+  FaLinkedin,
+  FaTwitter,
+  FaGithub,
+  FaInstagram,
+  // FaBriefcase
+} from 'react-icons/fa';
+
 
 class HeaderPage extends Component {
   render() {
     return (
       <div id="page">
-        <header className="container">
+        <header className="container header">
           <div className="overlay"></div>
           <div className="content">
-            {/* <div className="row"> */}
             <div className="table">
               <div className="display">
                 <div className="profile"></div>
                 <h1>
-                  <span>-Edson Villarroel Ricaldes-</span>
+                  <span className="span-text">-Edson Villarroel Ricaldes-</span>
                 </h1>
-                <h3>
+                <h3 className="h3-text">
                   {" "}
-                  <span>Web developer / mobile developer</span>
+                  <span className="span-text">Web developer / mobile developer</span>
                 </h3>
-                <p></p><ul>
-                <li><a href="#"><i className="icon-twitter2"></i></a></li>
-									<li><a href="#"><i className="icon-facebook2"></i></a></li>
-									<li><a href="#"><i className="icon-linkedin2"></i></a></li>
-									<li><a href="#"><i className="icon-dribbble2"></i></a></li>
+                <p></p>
+                <ul className="icon-container">
+                  <li className="icon" >
+                    <a  href="https://www.facebook.com/edsito.villarroelricaldes">
+
+                  <FaFacebookSquare color="white" size={'2rem'}/>
+                    </a>
+                  </li>
+                  <li className="icon">
+                    <a href="https://www.linkedin.com/in/edsonvillarroelricaldes/">
+                    <FaLinkedin color="white" size={'2rem'} />
+
+                    </a>
+                  </li>
+                  <li className="icon">
+                    <a href="www.facebook.com">
+                    <FaTwitter color="white" size={'2rem'} />
+
+                    </a>
+                  </li>
+                  <li className="icon">
+                    <a href="https://www.instagram.com/edson_villarroel_ricaldes/?next=%2F">
+                    <FaInstagram color="white" size={'2rem'} />
+
+                    </a>
+                  </li>
+                  <li className="icon">
+                    <a href="https://github.com/EdsonVillarroel">
+                    <FaGithub color="white" size={'2rem'} />
+
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
-          {/* </div> */}
         </header>
       </div>
     );
