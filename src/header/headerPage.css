@@ -9,7 +9,7 @@
   transition: 0.5s;
 }
 .header {
-  background-image: url("./../assets/imgs/cover_bg_3.jpg");
+  background-image: url("./../assets/imgs/capy.png");
   height: 801px;
   background-position: 0px 0px;
 }
@@ -24,6 +24,11 @@
   height: calc((var(--vh, 1vh) * 100) - -1.5rem);
   overflow: hidden;
 }
+@media (max-width: 600px) {
+  .container{
+    background-size: contain;
+  }
+}
 
 .overlay {
   position: absolute;
@@ -32,7 +37,7 @@
   left: 0;
   right: 0;
   /* background: rgba(255, 144, 0, 0.9); */
-  background: linear-gradient(rgba(255, 144, 0, 0.9), white);
+  background: linear-gradient(rgba(255, 144, 0, 0.9),rgba(255, 222, 179));
 
 }
 .container .display-t {
