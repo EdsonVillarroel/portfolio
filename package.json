@@ -11,6 +11,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "firebase": "^9.20.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
@@ -22,7 +23,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "firebase":"firebase deploy"
   },
   "eslintConfig": {
     "extends": [
@@ -44,5 +46,17 @@
   },
   "devDependencies": {
     "eslint-plugin-react": "^7.31.11"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdsonVillarroel/portfolio.git"
+  },
+  "author": "EdsonVillarroel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EdsonVillarroel/portfolio/issues"
+  },
+  "homepage": "https://github.com/EdsonVillarroel/portfolio#readme"
 }
+
+
