@@ -24,7 +24,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "firebase":"firebase deploy"
+    "firebase": "firebase deploy",
+    "deploy": "gh-page -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -45,7 +46,8 @@
     ]
   },
   "devDependencies": {
-    "eslint-plugin-react": "^7.31.11"
+    "eslint-plugin-react": "^7.31.11",
+    "gh-pages": "^5.0.0"
   },
   "repository": {
     "type": "git",
@@ -56,7 +58,5 @@
   "bugs": {
     "url": "https://github.com/EdsonVillarroel/portfolio/issues"
   },
-  "homepage": "https://github.com/EdsonVillarroel/portfolio#readme"
+  "homepage": "https://EdsonVillarroel.github.io/portfolio"
 }
-
-
