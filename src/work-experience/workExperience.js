@@ -37,7 +37,7 @@ class workExperience extends Component {
               </li>
               <li className="timeline-inverted animate-box">
                 <div className="timeline-badge">
-                  <FaBriefcase color="white" size={"2rem"} />
+                  <FaBriefcase color="white" size={"1.5rem"} />
                 </div>
                 <div className="timeline-panel text-start">
                   <div className="timeline-heading">
@@ -55,7 +55,7 @@ class workExperience extends Component {
               </li>
               <li className="animate-box timeline-unverted">
                 <div className="timeline-badge">
-                  <FaBriefcase color="white" size={"2rem"} />
+                  <FaBriefcase color="white" size={"1.5rem"} />
                 </div>
                 <div className="timeline-panel">
                   <div className="timeline-heading">
