@@ -189,6 +189,7 @@
     left: 15px;
     margin-left: 0;
     top: 16px;
+    display: grid;
   }
 
   ul.timeline > li > .timeline-panel {

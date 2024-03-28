@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import "./workExperience.css";
+import { Component } from "react";
 import { FaBriefcase } from "react-icons/fa";
+import "./WorkExperience.css";
 
 class workExperience extends Component {
   render() {
@@ -17,7 +17,7 @@ class workExperience extends Component {
               </li>
               <li className="animate-box timeline-unverted">
                 <div className="timeline-badge">
-                  <FaBriefcase color="white" size={"2rem"} />
+                  <FaBriefcase color="white" size={"1.5rem"} />
                 </div>
                 <div className="timeline-panel">
                   <div className="timeline-heading">
