@@ -39,20 +39,9 @@ class About extends Component {
           </div>
           <div className="container-presentaion">
             <h2 className="title-hello">Hello There!</h2>
-            <p className="content-presetation">
-              There live the blind texts far from the countries Vokalia and
-              Consonantia, there live the blind texts. Separated they live in
-              bookmarksgrove there live the blind texts far from the countries.
-            </p>
-            <p className="content-presetation">
-              Far far away, behind the word mountains, Quos quia provident
-              consequuntur culpa facere ratione maxime commodi voluptates id
-              repellat velit eaque aspernatur expedita. Possimus itaque adipisci
-              there live the blind texts from the countries Vokalia and
-              Consonantia, there live the blind texts. Quos quia provident
-              consequuntur culpa facere ratione maxime commodi voluptates id
-              repellat velit eaque aspernatur expedita. Possimus itaque
-              adipisci.
+            <p className="content-presentacion">
+
+            ¡Hola! Soy un apasionado desarrollador web con conocimientos en diseño web, Frontend con Angular y React.js y Backend con C#. Me encanta aprender cosas nuevas y estoy siempre en busca de nuevos desafíos para ampliar mis habilidades. Actualmente estoy enfocado en proyectos de desarrollo web, trabajando en aplicaciones de alta calidad y enfocado en el código limpio y la arquitectura basada en módulos. Como desarrollador, siempre me esfuerzo por mantenerme actualizado con las últimas tendencias y tecnologías, y me enorgullece mantener una sólida comprensión del ciclo de vida completo del desarrollo web. Me apasiona lo que hago y estoy emocionado de seguir creciendo y aprendiendo como desarrollador web. ¡Estoy abierto a nuevas oportunidades y espero poder hacer una contribución positiva en futuros proyectos!
             </p>
           </div>
         </div>
