@@ -1,12 +1,14 @@
-import React, { Component } from "react";
-import "./workExperience.css";
+import { Component } from "react";
 import { FaBriefcase } from "react-icons/fa";
+import "./WorkExperience.css";
 
 class workExperience extends Component {
   render() {
     return (
       <div>
-        <div className="title-work-experience"><h3>My Resume</h3></div>
+        <div className="title-work-experience">
+          <h3>My Resume</h3>
+        </div>
         <div>
           <div className="container-experience">
             <ul className="timeline">
@@ -15,116 +17,106 @@ class workExperience extends Component {
                   <h3>Work Experience</h3>
                 </div>
               </li>
-              <li className="animate-box timeline-unverted">
+              <li className="timeline-inverted animate-box">
                 <div className="timeline-badge">
-                  <FaBriefcase color="white" size={"2rem"} />
+                  <FaBriefcase color="white" size={"1.5rem"} />
                 </div>
-                <div className="timeline-panel">
+                <div className="timeline-panel text-start">
                   <div className="timeline-heading">
-                    <h3 className="timeline-title">Senior Developer</h3>
+                    <h3 className="timeline-title">Freelancer</h3>
                     <span className="company">
-                      Company Name - 2016 - Current
+                      Banco Sol - Junio 2023 - Actual
                     </span>
                   </div>
                   <div className="timeline-body">
                     <p>
-                      Far far away, behind the word mountains, far from the
-                      countries Vokalia and Consonantia, there live the blind
-                      texts.
+                      Trabajando en el proyecto de credito de linea 100% online,
+                      pionero en Bolivia y próximamente en Latinoamérica. Como
+                      desarrollador Full Stack para el Centro Digital, mi
+                      enfoque abarca tanto el FrontEnd con ReactJS y NextJS como
+                      el BackEnd con .NET, asegurando una experiencia de usuario
+                      fluida y segura en nuestras plataformas.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li className="animate-box timeline-unverted">
+                <div className="timeline-badge">
+                  <FaBriefcase color="white" size={"1.5rem"} />
+                </div>
+                <div className="timeline-panel">
+                  <div className="timeline-heading">
+                    <h3 className="timeline-title">Semi-Senior Developer</h3>
+                    <span className="company">
+                      Banco Fassil - 2021 - Mayo 2023
+                    </span>
+                  </div>
+                  <div className="timeline-body">
+                    <p>
+                      Trabajo como ingeniero de software en el Banco Fassil,
+                      donde me desempeño como desarrollador FrontEnd para el
+                      área de innovación y desarrollo en varios proyectos. Entre
+                      ellos, destaca el proyecto de citas médicas virtuales
+                      (Medic movil) utilizando Angular, C# y Agora para el
+                      manejo de llamadas, y el proyecto de apertura de cuenta
+                      online (ACR) con reconocimiento facial y verificación
+                      biométrica mediante FacePhi.
+                    </p>
+                    <p>
+                      Además, he trabajado en el proyecto de apertura de cuenta
+                      en agencia y en el mantenimiento del proyecto de sorteo
+                      Fabulosa, ambos utilizando Angular y C#. También he
+                      colaborado en la creación de la librería de componentes
+                      Pionus, utilizando Angular y StoryBook para su
+                      documentación.
                     </p>
                   </div>
                 </div>
               </li>
               <li className="timeline-inverted animate-box">
                 <div className="timeline-badge">
-                  <FaBriefcase color="white" size={"2rem"} />
+                  <FaBriefcase color="white" size={"1.5rem"} />
                 </div>
                 <div className="timeline-panel text-start">
                   <div className="timeline-heading">
-                    <h3 className="timeline-title">Junior Developer</h3>
-                    <span className="company">Company Name - 2013 - 2015</span>
+                    <h3 className="timeline-title">Freelancer</h3>
+                    <span className="company">
+                      Mayo 2022 - Mayo 2022
+                    </span>
                   </div>
                   <div className="timeline-body">
                     <p>
-                      Far far away, behind the word mountains, they live in
-                      Bookmarksgrove right at the coast of the Semantics, a
-                      large language ocean.
+                      Trabajé en el desarrollo en el proyecto de ecommerce, mi
+                      trabajo consiste en utilizar Vue.js para el frontend y
+                      .NET para el backend, en colaboración con el equipo de
+                      diseño y de back-end, para crear una experiencia de compra
+                      en línea fluida y segura.
                     </p>
                   </div>
                 </div>
               </li>
               <li className="animate-box timeline-unverted">
                 <div className="timeline-badge">
-                  <FaBriefcase color="white" size={"2rem"} />
+                  <FaBriefcase color="white" size={"1.5rem"} />
                 </div>
                 <div className="timeline-panel">
                   <div className="timeline-heading">
-                    <h3 className="timeline-title">Senior Developer</h3>
+                    <h3 className="timeline-title">Junior Developer</h3>
                     <span className="company">
-                      Company Name - 2016 - Current
+                      A2Odev - Marzo 2020 - Diciembre 2020
                     </span>
                   </div>
                   <div className="timeline-body">
                     <p>
-                      Far far away, behind the word mountains, far from the
-                      countries Vokalia and Consonantia, there live the blind
-                      texts.
+                      Trabajé en el desarrollo de la aplicación móvil GoTitle
+                      utilizando React Native para el registro de títulos de
+                      documentos vía móvil, y en la aplicación web Alte
+                      utilizando AngularJS y Laravel para el registro de títulos
+                      de documentos vía web.
                     </p>
                   </div>
                 </div>
               </li>
-
-              {/* <li class="timeline-heading text-center animate-box">
-							<div><h3>Education</h3></div>
-						</li>
-              <li class="timeline-inverted animate-box">
-							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Masters Degree</h3>
-									<span class="company">University Name - 2007 - 2009</span>
-								</div>
-								<div class="timeline-body">
-									<p>Far far away, behind the word mountains, they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-								</div>
-							</div>
-						</li> */}
-              {/* <li class="animate-box timeline-unverted">
-							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Bachelors Degree</h3>
-									<span class="company">University Name - 2002 - 2006</span>
-								</div>
-								<div class="timeline-body">
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-								</div>
-							</div>
-						</li> */}
-              {/* <li class="timeline-inverted animate-box">
-							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Diploma Course</h3>
-									<span class="company">College Name - 1999 - 2001</span>
-								</div>
-								<div class="timeline-body">
-									<p>Far far away, behind the word mountains, they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-								</div>
-							</div>
-						</li> */}
-              {/* <li class="animate-box timeline-unverted">
-							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Graduation</h3>
-									<span class="company">College Name - 1994 - 1998</span>
-								</div>
-								<div class="timeline-body">
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-								</div>
-							</div>
-						</li> */}
             </ul>
           </div>
         </div>

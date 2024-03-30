@@ -1,6 +1,13 @@
-import React, { Component } from 'react';
-import { FaHtml5, FaCss3Alt, FaReact, FaGit,FaAngular } from 'react-icons/fa';
-import './skills.css';
+import React, { Component } from "react";
+import {
+  FaAngular,
+  FaCss3Alt,
+  FaGit,
+  FaHtml5,
+  FaJs,
+  FaReact,
+} from "react-icons/fa";
+import "./skills.css";
 
 class skills extends Component {
   constructor(props) {
@@ -14,12 +21,13 @@ class skills extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
-    this.skillsOffset = this.skillsRef.current.offsetTop - window.innerHeight / 2;
+    window.addEventListener("scroll", this.handleScroll);
+    this.skillsOffset =
+      this.skillsRef.current.offsetTop - window.innerHeight / 2;
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener("scroll", this.handleScroll);
   }
 
   handleScroll = () => {
@@ -34,7 +42,7 @@ class skills extends Component {
   animateSkills = () => {
     const intervals = [];
     const { offsets } = this.state;
-    const percentages = [90, 85, 80, 70];
+    const percentages = [85, 75, 50, 60,];
     percentages.forEach((percent, i) => {
       intervals[i] = setInterval(() => {
         if (offsets[i] >= percent) {
@@ -57,8 +65,8 @@ class skills extends Component {
           <Skill icon={<FaCss3Alt />} percent={offsets[1]} visible={!visible} />
           <Skill icon={<FaReact />} percent={offsets[2]} visible={!visible} />
           <Skill icon={<FaGit />} percent={offsets[3]} visible={!visible} />
-          <Skill icon={<FaAngular />} percent={offsets[3]} visible={!visible} />
-          {/* <Skill icon={<FaJavaScript />} percent={offsets[3]} visible={!visible} /> */}
+          <Skill icon={<FaAngular />} percent={offsets[0]} visible={!visible} />
+          <Skill icon={<FaJs />} percent={offsets[1]} visible={!visible} />
         </div>
       </section>
     );
@@ -68,8 +76,8 @@ class skills extends Component {
 class Skill extends Component {
   render() {
     const { icon, percent, visible } = this.props;
-    const svgClass = `progress-ring__circle ${visible ? 'visible' : ''}`;
-    const percentageClass = `skill-percentage ${visible ? '' : 'visible'}`;
+    const svgClass = `progress-ring__circle ${visible ? "visible" : ""}`;
+    const percentageClass = `skill-percentage ${visible ? "" : "visible"}`;
     return (
       <div className="skill">
         <div className="skill-icon">{icon}</div>
