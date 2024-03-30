@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import {
-  FaHtml5,
-  FaCss3Alt,
-  FaReact,
-  FaGit,
   FaAngular,
+  FaCss3Alt,
+  FaGit,
+  FaHtml5,
   FaJs,
+  FaReact,
 } from "react-icons/fa";
 import "./skills.css";
 
