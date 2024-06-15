@@ -23,7 +23,7 @@ class workExperience extends Component {
                 </div>
                 <div className="timeline-panel text-start">
                   <div className="timeline-heading">
-                    <h3 className="timeline-title">Freelancer</h3>
+                    <h3 className="timeline-title">Semi-Senior Developer</h3>
                     <span className="company">
                       Banco Sol - Junio 2023 - Actual
                     </span>
@@ -80,9 +80,7 @@ class workExperience extends Component {
                 <div className="timeline-panel text-start">
                   <div className="timeline-heading">
                     <h3 className="timeline-title">Freelancer</h3>
-                    <span className="company">
-                      Mayo 2022 - Mayo 2022
-                    </span>
+                    <span className="company">Mayo 2022 - Mayo 2022</span>
                   </div>
                   <div className="timeline-body">
                     <p>

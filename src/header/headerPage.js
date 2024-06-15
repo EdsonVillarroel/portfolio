@@ -1,13 +1,13 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import "./headerPage.css";
 // import { FaBeer } from "react-icons/fa";
+import TypingEffect from "components/TextAnimation/TypingEffect";
 import {
   FaFacebookSquare,
-  FaLinkedin,
-  FaTwitter,
   FaGithub,
   FaInstagram,
-  // FaBriefcase
+  FaLinkedin,
+  FaTwitter,
 } from 'react-icons/fa';
 
 
@@ -21,9 +21,10 @@ class HeaderPage extends Component {
             <div className="table">
               <div className="display">
                 <div className="profile"></div>
-                <h1>
+                {/* <h1>
                   <span className="span-text">-Edson Villarroel Ricaldes-</span>
-                </h1>
+                </h1> */}
+                <TypingEffect></TypingEffect>
                 <h3 className="h3-text">
                   {" "}
                   <span className="span-text">Web developer / mobile developer</span>

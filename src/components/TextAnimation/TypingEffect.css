@@ -1,0 +1,138 @@
+@charset "UTF-8";
+
+@-webkit-keyframes typed {
+  0%, 3.70% { content: "E"; }
+  3.71%, 7.40% { content: "Ed"; }
+  7.41%, 11.10% { content: "Eds"; }
+  11.11%, 14.80% { content: "Edso"; }
+  14.81%, 18.50% { content: "Edson"; }
+  18.51%, 22.20% { content: "Edson V"; }
+  22.21%, 25.90% { content: "Edson Vi"; }
+  25.91%, 29.60% { content: "Edson Vil"; }
+  29.61%, 33.30% { content: "Edson Vill"; }
+  33.31%, 37.00% { content: "Edson Villa"; }
+  37.01%, 40.70% { content: "Edson Villar"; }
+  40.71%, 44.40% { content: "Edson Villarr"; }
+  44.41%, 48.10% { content: "Edson Villarro"; }
+  48.11%, 51.80% { content: "Edson Villarroe"; }
+  51.81%, 55.50% { content: "Edson Villarroel"; }
+  55.51%, 59.20% { content: "Edson Villarroel R"; }
+  59.21%, 62.90% { content: "Edson Villarroel Ri"; }
+  62.91%, 66.60% { content: "Edson Villarroel Ric"; }
+  66.61%, 70.30% { content: "Edson Villarroel Rica"; }
+  70.31%, 74.00% { content: "Edson Villarroel Rical"; }
+  74.01%, 77.70% { content: "Edson Villarroel Ricald"; }
+  77.71%, 81.40% { content: "Edson Villarroel Ricalde"; }
+  81.41%, 100% { content: "Edson Villarroel Ricaldes"; }
+}
+
+@keyframes typed {
+  0%, 3.70% { content: "E"; }
+  3.71%, 7.40% { content: "Ed"; }
+  7.41%, 11.10% { content: "Eds"; }
+  11.11%, 14.80% { content: "Edso"; }
+  14.81%, 18.50% { content: "Edson"; }
+  18.51%, 22.20% { content: "Edson V"; }
+  22.21%, 25.90% { content: "Edson Vi"; }
+  25.91%, 29.60% { content: "Edson Vil"; }
+  29.61%, 33.30% { content: "Edson Vill"; }
+  33.31%, 37.00% { content: "Edson Villa"; }
+  37.01%, 40.70% { content: "Edson Villar"; }
+  40.71%, 44.40% { content: "Edson Villarr"; }
+  44.41%, 48.10% { content: "Edson Villarro"; }
+  48.11%, 51.80% { content: "Edson Villarroe"; }
+  51.81%, 55.50% { content: "Edson Villarroel"; }
+  55.51%, 59.20% { content: "Edson Villarroel R"; }
+  59.21%, 62.90% { content: "Edson Villarroel Ri"; }
+  62.91%, 66.60% { content: "Edson Villarroel Ric"; }
+  66.61%, 70.30% { content: "Edson Villarroel Rica"; }
+  70.31%, 74.00% { content: "Edson Villarroel Rical"; }
+  74.01%, 77.70% { content: "Edson Villarroel Ricald"; }
+  77.71%, 81.40% { content: "Edson Villarroel Ricalde"; }
+  81.41%, 100% { content: "Edson Villarroel Ricaldes"; }
+}
+
+@-webkit-keyframes beam-blink {
+  75% { border-color: transparent; }
+}
+
+@keyframes beam-blink {
+  75% { border-color: transparent; }
+}
+
+* {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+html, body {
+  height: 100%;
+}
+
+.typing-effect {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  background-repeat: repeat-y;
+  background-position: center center;
+  background-size: cover, 100% 3px;
+  font-size: calc(10px + 2vw);
+  font-family: "Kaushan Script", cursive;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+    -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+}
+
+.typing-effect::after {
+  content: "Edson Villarroel Ricaldes​";
+  position: relative;
+  top: -13px;
+  display: inline-block;
+  padding-right: 3px;
+  padding-right: calc(3px + 0.1vw);
+  border-right: 10px solid rgb(255, 255, 255);
+  border-right: calc(1.1vw + 4px) solid rgb(255, 255, 255);
+  text-shadow: 0 0 5px rgb(255, 255, 255);
+  white-space: nowrap;
+  -webkit-animation: typed 10.36s linear 1s 1, beam-blink 1s infinite;
+  animation: typed 10.36s linear 1s 1, beam-blink 1s infinite;
+}
+
+@media (max-width: 575px) {
+  .typing-effect::after {
+    /* top: -33px; */
+     font-size: calc(20px + 2vw);
+  }
+}
+
+.typing-effect::before {
+  /* content: "3 strings / 52 chars / 18.36s duration"; */
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 3px 0;
+  background: transparent;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 0.7px;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 575px) {
+  .typing-effect::before {
+    /* content: "3 strings \a 52 chars \a 18.36s duration"; */
+  }
+}
+.typing-effect-container{
+  /* margin-top: 3rem; */
+}
