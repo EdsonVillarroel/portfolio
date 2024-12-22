@@ -9,7 +9,6 @@ const GitHubRepositoriesCarousel = ({ username }) => {
 
   useEffect(() => {
     fetchRepositories(username).then(setRepositories);
-    console.log(repositories)
   }, [username]);
 
   useEffect(() => {

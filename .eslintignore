@@ -1,0 +1,27 @@
+# Ignorar archivos y carpetas en el análisis de ESLint
+
+# Node.js y dependencias
+node_modules/
+dist/
+build/
+
+# Archivos de configuración y empaquetado
+*.config.js
+*.config.cjs
+*.config.mjs
+*.config.json
+
+# Archivos específicos del entorno de desarrollo
+.env
+.env.local
+.env.*.local
+
+# Archivos de datos y logs
+*.log
+coverage/
+*.lock
+
+# Ignorar salidas específicas del proyecto
+public/
+.vscode/
+.DS_Store
