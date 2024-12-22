@@ -1,52 +1,53 @@
-import "./about.css";
-
 const About = () => {
   return (
-    <div className="container-about">
-      <div className="title">
-        <h2 className="about-title">About Me</h2>
+    <div className="min-h-screen p-10 bg-gradient-to-b dark:bg-gray-800 from-orange-200  opacity-0 animate-fadeIn py-16 px-4">
+      <div className="text-center mb-8">
+        <h2 className="text-4xl font-bold text-black">About Me</h2>
       </div>
-      <div className="row">
-        <div className="container-personal-info">
-          <ul className="info">
-            <li className="personal-data">
-              <span className="first-block span">Nombre:</span>
-              <span className="second-block span">
-                Edson Villarroel Ricaldes
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Información Personal */}
+        <div className=" dark:bg-gray-800  p-6 rounded-lg shadow-md">
+          <ul className="space-y-4">
+            <li className="flex justify-between">
+              <span className="font-semibold text-lg text-black">Nombre:</span>
+              <span className="text-black-300">Edson Villarroel Ricaldes</span>
+            </li>
+            <li className="flex justify-between">
+              <span className="font-semibold text-lg text-black">Celular:</span>
+              <span className="text-black-300">+591 73690866</span>
+            </li>
+            <li className="flex justify-between">
+              <span className="font-semibold text-lg text-black">Correo:</span>
+              <span className="text-black-300">villarroel@gmail.com</span>
+            </li>
+            <li className="flex justify-between">
+              <span className="font-semibold text-lg text-black">
+                Dirección:
               </span>
-            </li>
-            <li className="personal-data">
-              <span className="first-block span">Celular:</span>
-              <span className="second-block span">+591 73690866</span>
-            </li>
-            <li className="personal-data">
-              <span className="first-block span">Correo:</span>
-              <span className="second-block span">villarroel@gmail.com</span>
-            </li>
-            <li className="personal-data">
-              <span className="first-block span">Address:</span>
-              <span className="second-block span">
-                Santa Cruz de la Sierra Av. libertad N.- 18
+              <span className="text-black-300">
+                Santa Cruz de la Sierra, Av. Libertad N.- 18
               </span>
             </li>
           </ul>
         </div>
-        <div className="container-presentaion">
-          <h2 className="title-hello">Hello There!</h2>
-          <p className="content-presentacion">
+
+        {/* Presentación */}
+        <div className="dark:bg-gray-800 p-6 rounded-lg shadow-md flex flex-col">
+          <h2 className="text-3xl font-semibold text-black mb-4">
+            Hello There!
+          </h2>
+          <p className="text-black-300 leading-relaxed text-justify">
             ¡Hola! Soy un apasionado desarrollador web con conocimientos en
-            diseño web, Frontend con Angular y React.js y Backend con C#. Me
-            encanta aprender cosas nuevas y estoy siempre en busca de nuevos
-            desafíos para ampliar mis habilidades. Actualmente estoy enfocado en
+            diseño web, Frontend con Angular y React.js, y Backend con C#. Me
+            encanta aprender cosas nuevas y siempre estoy en busca de nuevos
+            desafíos para ampliar mis habilidades. Actualmente, me enfoco en
             proyectos de desarrollo web, trabajando en aplicaciones de alta
-            calidad y enfocado en el código limpio y la arquitectura basada en
-            módulos. Como desarrollador, siempre me esfuerzo por mantenerme
-            actualizado con las últimas tendencias y tecnologías, y me
-            enorgullece mantener una sólida comprensión del ciclo de vida
-            completo del desarrollo web. Me apasiona lo que hago y estoy
-            emocionado de seguir creciendo y aprendiendo como desarrollador web.
-            ¡Estoy abierto a nuevas oportunidades y espero poder hacer una
-            contribución positiva en futuros proyectos!
+            calidad con código limpio y arquitectura modular. Me esfuerzo por
+            mantenerme actualizado con las últimas tendencias y tecnologías, y
+            tengo una sólida comprensión del ciclo de vida completo del
+            desarrollo web. Estoy emocionado de seguir creciendo y aprendiendo
+            como desarrollador, ¡y espero contribuir positivamente en futuros
+            proyectos!
           </p>
         </div>
       </div>
