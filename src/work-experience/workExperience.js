@@ -48,7 +48,11 @@ const WorkExperience = () => {
         </h2>
 
         <div className="relative">
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-orange-600 via-orange-400 to-orange-200"></div>
+          {/* Timeline for desktop/tablet */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-orange-600 via-orange-400 to-orange-200 md:block hidden"></div>
+
+          {/* Timeline for mobile */}
+          <div className="absolute left-0 h-full w-1 bg-gradient-to-b from-orange-600 via-orange-400 to-orange-200 md:hidden block"></div>
 
           <div className="space-y-24">
             {experiences.map((experience, index) => (
@@ -58,14 +62,22 @@ const WorkExperience = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className={`flex items-center ${
-                  index % 2 === 0 ? "flex-row" : "flex-row-reverse"
+                className={`relative flex items-center ${
+                  index % 2 === 0
+                    ? "md:flex-row flex-row"
+                    : "md:flex-row-reverse flex-row"
                 }`}
               >
+                {/* Desktop/Tablet Layout */}
                 <div
-                  className={`w-1/2 ${
-                    index % 2 === 0 ? "pr-8 text-right" : "pl-8 text-left"
-                  }`}
+                  className={`
+                    md:w-1/2 w-full pl-12 md:pl-0
+                    ${
+                      index % 2 === 0
+                        ? "md:pr-8 md:text-right text-left"
+                        : "md:pl-8 md:text-left text-left"
+                    }
+                  `}
                 >
                   <div className="space-y-2">
                     <h4 className="text-xl font-semibold text-orange-600 dark:text-orange-400">
@@ -83,19 +95,21 @@ const WorkExperience = () => {
                   </div>
                 </div>
 
+                {/* Icon - Positioned absolutely for mobile */}
                 <motion.div
                   whileHover={{ scale: 1.2 }}
-                  className="relative z-10 w-16 h-16 rounded-full bg-white dark:bg-gray-800 shadow-lg flex items-center justify-center"
+                  className={`
+                    absolute md:static left-[-17px] 
+                    z-10 w-10 h-10 md:w-16 md:h-16 
+                    rounded-full bg-white dark:bg-gray-800 
+                    shadow-lg flex items-center justify-center
+                  `}
                 >
                   {experience.icon}
                 </motion.div>
 
-                <div
-                  className={`w-1/2 ${
-                    index % 2 === 0 ? "pl-8" : "pr-8 text-right"
-                  }`}
-                >
-                </div>
+                {/* Empty space for desktop/tablet layout */}
+                <div className="md:w-1/2 hidden md:block"></div>
               </motion.div>
             ))}
           </div>

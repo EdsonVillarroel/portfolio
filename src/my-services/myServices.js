@@ -27,13 +27,13 @@ const getLanguageIcon = (language) => {
     case "TypeScript":
       return <SiTypescript className="text-blue-600" />;
     case "HTML":
-      return <SiHtml5 className="text-orange-500" />;
+      return <SiHtml5 className="text-orange-500" />; 
     case "CSS":
       return <SiCsswizardry className="text-blue-600" />;
     case "C":
       return <SiC className="text-cyan-400" />;
     default:
-      return <FaGithub />;
+      return <FaGithub className="text-gray-600" />;
   }
 };
 
@@ -47,29 +47,30 @@ const getTechnologyIcon = (tech) => {
     case "tailwind":
       return <SiTailwindcss className="text-cyan-400" />;
     case "angular":
-      return <SiAngular className="text-red-500" />;
+      return <SiAngular className="text-red-600" />;
     case "nestjs":
       return <SiNestjs className="text-red-600" />;
     case "swagger":
       return <SiSwagger className="text-green-500" />;
     case "nextjs":
-      return <SiNextdotjs className="text-black" />;
+      return <SiNextdotjs className="text-black" />; 
     case "typescript":
-      return <SiTypescript className="text-blue-500" />;
+      return <SiTypescript className="text-blue-600" />;
     case "html5":
       return <SiHtml5 className="text-orange-500" />;
     case "css":
-      return <SiCsswizardry className="text-blue-600" />;
+      return <SiCsswizardry className="text-blue-600" />; 
     case "firebase":
-      return <SiFirebase className="text-blue-600" />;
+      return <SiFirebase className="text-orange-500" />; 
     case "scss":
-      return <SiSass className="text-blue-600" />;
+      return <SiSass className="text-pink-400" />; 
     case "c":
-      return <SiC className="text-cyan-400" />;
+      return <SiC className="text-cyan-400" />; 
     default:
-      return null;
+      return null; 
   }
 };
+
 
 const RepositoryItem = ({ repo }) => (
   <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl">
@@ -78,7 +79,7 @@ const RepositoryItem = ({ repo }) => (
         href={repo.html_url}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-xl font-bold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-2"
+        className="text-xl font-bold text-orange-600 dark:text-orange-400 hover:underline flex items-center gap-2"
       >
         <FaGithub />
         {repo.name}
@@ -189,14 +190,14 @@ const GitHubRepositoriesCarousel = () => {
               <div className="flex justify-center mt-8 space-x-4">
                 <button
                   onClick={prevSlide}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-colors"
+                  className="bg-orange-600 text-white px-4 py-2 rounded-full hover:bg-orange-700 transition-colors"
                   disabled={currentSlide === 0}
                 >
                   Previous
                 </button>
                 <button
                   onClick={nextSlide}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-colors"
+                  className="bg-orange-600 text-white px-4 py-2 rounded-full hover:bg-orange-700 transition-colors"
                   disabled={currentSlide === totalSlides - 1}
                 >
                   Next
