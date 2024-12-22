@@ -1,5 +1,5 @@
-import TypingEffect from "components/TextAnimation/TypingEffect";
-import { useDarkMode } from "hooks/DarkModeProvider";
+import TypingEffect from "components/ui/TypingEffect";
+import { useDarkMode } from "context/DarkModeProvider";
 import { cloneElement } from "react";
 import {
   FaFacebookSquare,
@@ -10,10 +10,10 @@ import {
   FaSun,
   FaTwitter,
 } from "react-icons/fa";
-import capyBackground from "./../assets/imgs/capyWeb.webp";
-import userProfile from "./../assets/imgs/user-3.jpg";
+import capyBackground from "../../assets/imgs/capyWeb.webp";
+import userProfile from "../../assets/imgs/user-3.jpg";
 
-const HeaderPage = () => {
+const Header = () => {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
   return (
     <div id="page" className="relative w-full h-screen overflow-hidden">
@@ -88,4 +88,5 @@ const HeaderPage = () => {
   );
 };
 
-export default HeaderPage;
+export default Header
+;
