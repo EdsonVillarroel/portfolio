@@ -1,5 +1,6 @@
-import { useDarkMode } from "hooks/DarkModeProvider";
-import { useEffect, useState } from "react";
+import SkillCard from "components/ui/SkillCard";
+import { useDarkMode } from "context/DarkModeProvider";
+import { useState } from "react";
 import { FaCss3Alt, FaHtml5, FaNode, FaPython, FaReact } from "react-icons/fa";
 import {
   SiJavascript,
@@ -12,9 +13,6 @@ import {
 const SkillsSection = () => {
   const [hoveredSkill, setHoveredSkill] = useState(null);
   const { isDarkMode } = useDarkMode();
-  useEffect(() => {
-    console.log(isDarkMode);
-  }, [isDarkMode]);
 
   const skillsData = [
     { name: "React", icon: FaReact, color: "text-blue-500" },
@@ -28,6 +26,9 @@ const SkillsSection = () => {
     { name: "MongoDB", icon: SiMongodb, color: "text-green-500" },
     { name: "Redux", icon: SiRedux, color: "text-purple-600" },
   ];
+
+  const handleMouseEnter = (index) => setHoveredSkill(index);
+  const handleMouseLeave = () => setHoveredSkill(null);
 
   return (
     <div className="w-full py-16 bg-gradient-to-b dark:from-gray-900 to-black">
@@ -43,45 +44,14 @@ const SkillsSection = () => {
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
           {skillsData.map((skill, index) => (
-            <div
+            <SkillCard
               key={index}
-              className="relative group"
-              onMouseEnter={() => setHoveredSkill(index)}
-              onMouseLeave={() => setHoveredSkill(null)}
-            >
-              <div
-                className={`
-                  h-32 rounded-xl p-6
-                  ${isDarkMode ? "bg-gray-800" : "bg-white"}
-                  backdrop-blur-lg
-                  transform transition-all duration-300 ease-in-out
-                  ${hoveredSkill === index ? "scale-105 shadow-xl" : ""}
-                  ${isDarkMode ? "hover:bg-gray-700" : "hover:bg-gray-100"}
-                  flex flex-col items-center justify-center
-                  cursor-pointer
-                `}
-              >
-                <skill.icon
-                  className={`text-4xl ${skill.color} mb-3 transform transition-transform group-hover:scale-110`}
-                />
-                <span
-                  className={`font-medium text-sm text-center ${
-                    isDarkMode ? "text-white" : "text-gray-800"
-                  }`}
-                >
-                  {skill.name}
-                </span>
-
-                <div
-                  className={`
-                    absolute -bottom-2 left-0 right-0
-                    h-1 bg-gradient-to-r from-blue-500 to-purple-500
-                    transform origin-left transition-transform duration-300
-                    ${hoveredSkill === index ? "scale-x-100" : "scale-x-0"}
-                  `}
-                />
-              </div>
-            </div>
+              skill={skill}
+              isHovered={hoveredSkill === index}
+              isDarkMode={isDarkMode}
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={handleMouseLeave}
+            />
           ))}
         </div>
       </div>
