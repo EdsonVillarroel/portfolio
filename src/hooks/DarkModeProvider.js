@@ -1,10 +1,7 @@
-// DarkModeContext.js
 import { createContext, useContext, useEffect, useState } from "react";
 
-// Crear el contexto
 const DarkModeContext = createContext();
 
-// Proveedor del contexto
 export const DarkModeProvider = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
     const savedTheme = localStorage.getItem("theme");
@@ -33,7 +30,6 @@ export const DarkModeProvider = ({ children }) => {
   );
 };
 
-// Hook para usar el contexto
 export const useDarkMode = () => {
   return useContext(DarkModeContext);
 };

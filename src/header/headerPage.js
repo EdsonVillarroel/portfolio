@@ -21,7 +21,6 @@ const HeaderPage = () => {
         className="relative flex items-center justify-center h-full bg-cover bg-center bg-fixed"
         style={{ backgroundImage: `url(${capyBackground})` }}
       >
-        {/* Botón de cambio de tema en la esquina superior derecha */}
         <button
           onClick={toggleDarkMode}
           className={`absolute top-4 right-4 z-20 p-2 rounded-full transition duration-300 transform hover:scale-105 ${
@@ -40,20 +39,17 @@ const HeaderPage = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-orange-400 to-orange-200 opacity-90"></div>
 
         <div className="relative z-10 text-center">
-          {/* Foto de perfil */}
           <div
             className="w-48 h-48 mx-auto mb-8 rounded-full bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${userProfile})` }}
           ></div>
 
-          {/* Animación de texto */}
           <TypingEffect />
 
           <h3 className="text-2xl text-white font-mono mt-4">
             <span>Web Developer / Mobile Developer</span>
           </h3>
 
-          {/* Iconos de redes sociales */}
           <ul className="flex justify-center mt-6 space-x-6">
             {[
               {

@@ -4,7 +4,7 @@ import { FaLaptopCode, FaMobileAlt } from "react-icons/fa";
 const experiences = [
   {
     id: 1,
-    title: "Semi-Senior Developer",
+    title: "FullStack Developer",
     company: "Banco Sol",
     date: "Junio 2023 - Actual",
     description:
@@ -13,7 +13,7 @@ const experiences = [
   },
   {
     id: 2,
-    title: "Semi-Senior Developer",
+    title: "FullStack Developer",
     company: "Banco Fassil",
     date: "2021 - Mayo 2023",
     description:
@@ -22,7 +22,7 @@ const experiences = [
   },
   {
     id: 3,
-    title: "Freelancer",
+    title: "FrontEnd Developer",
     company: "Mayo 2022 - Mayo 2022",
     description:
       "Trabajé en el desarrollo en el proyecto de ecommerce, utilizando Vue.js para el frontend y .NET para el backend, colaborando con el equipo de diseño y de back-end, para crear una experiencia de compra en línea fluida y segura.",
@@ -30,7 +30,7 @@ const experiences = [
   },
   {
     id: 4,
-    title: "Junior Developer",
+    title: "FrontEnd Web/Mobile Developer",
     company: "A2Odev",
     date: "Marzo 2020 - Diciembre 2020",
     description:
@@ -48,10 +48,8 @@ const WorkExperience = () => {
         </h2>
 
         <div className="relative">
-          {/* Línea de la cronología */}
           <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-orange-600 via-orange-400 to-orange-200"></div>
 
-          {/* Elementos de experiencia */}
           <div className="space-y-24">
             {experiences.map((experience, index) => (
               <motion.div
@@ -97,22 +95,6 @@ const WorkExperience = () => {
                     index % 2 === 0 ? "pl-8" : "pr-8 text-right"
                   }`}
                 >
-                  {/* {index % 2 !== 0 && (
-                    <div className="space-y-2">
-                      <h4 className="text-xl font-semibold text-blue-600 dark:text-blue-400">
-                        {experience.title}
-                      </h4>
-                      <div className="text-lg text-gray-600 dark:text-gray-300">
-                        {experience.company}
-                      </div>
-                      {experience.date && (
-                        <span className="text-gray-500">{experience.date}</span>
-                      )}
-                      <p className="text-gray-500 dark:text-gray-400">
-                        {experience.description}
-                      </p>
-                    </div>
-                  )} */}
                 </div>
               </motion.div>
             ))}

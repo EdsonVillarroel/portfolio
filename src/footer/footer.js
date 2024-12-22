@@ -32,13 +32,11 @@ const Footer = () => {
     <footer className="w-full bg-gradient-to-b from-white dark:from-gray-800 dark:to-gray-900 py-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          {/* Información del desarrollador */}
           <p className="text-sm text-gray-800 dark:text-gray-300 mb-4 md:mb-0">
             &copy; {new Date().getFullYear()} Edson Villarroel Ricaldes. All
             rights reserved.
           </p>
 
-          {/* Enlaces de redes sociales */}
           <ul className="flex space-x-6">
             {socialLinks.map(({ href, icon }, index) => (
               <li key={index}>
