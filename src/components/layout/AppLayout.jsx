@@ -1,6 +1,7 @@
-import Header from "components/layout/header";
 import { DarkModeProvider } from "context/DarkModeProvider";
 import Footer from "./footer";
+import Header from "./header";
+
 
 const AppLayout = ({ children }) => {
   return (

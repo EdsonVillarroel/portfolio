@@ -1,4 +1,3 @@
-import TypingEffect from "components/ui/TypingEffect";
 import { useDarkMode } from "context/DarkModeProvider";
 import { cloneElement } from "react";
 import {
@@ -11,7 +10,8 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import capyBackground from "../../assets/imgs/capyWeb.webp";
-import userProfile from "../../assets/imgs/user-3.jpg";
+import userProfile from "../../assets/imgs/user-3.webp";
+import TypingEffect from "../ui/TypingEffect";
 
 const Header = () => {
   const { isDarkMode, toggleDarkMode } = useDarkMode();

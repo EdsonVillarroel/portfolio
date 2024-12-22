@@ -1,4 +1,3 @@
-import SkillCard from "components/ui/SkillCard";
 import { useDarkMode } from "context/DarkModeProvider";
 import { useState } from "react";
 import { FaCss3Alt, FaHtml5, FaNode, FaPython, FaReact } from "react-icons/fa";
@@ -9,6 +8,7 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
+import SkillCard from "../ui/SkillCard";
 
 const SkillsSection = () => {
   const [hoveredSkill, setHoveredSkill] = useState(null);
