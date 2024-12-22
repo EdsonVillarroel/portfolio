@@ -1,6 +1,19 @@
 {
-    "compilerOptions": {
-      "baseUrl": "src"
-    },
-    "include": ["src"]
+"compilerOptions": {
+  "target": "ESNext", 
+  "module": "ESNext",
+  "jsx": "react-jsx",
+  "baseUrl": "./src", 
+  "paths": {
+    "@/*": [
+      "*"
+    ] 
+  }
+},
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
