@@ -63,14 +63,14 @@ const GitHubRepositoriesCarousel = ({ username }) => {
             <div className="flex justify-center mt-8 space-x-4">
               <button
                 onClick={prevSlide}
-                className="bg-orange-600 text-white px-4 py-2 rounded-full hover:bg-orange-700 transition-colors"
+                className="bg-orange-500 text-gray-900 px-4 py-2 rounded-full hover:bg-orange-600 transition-colors"
                 disabled={currentSlide === 0}
               >
                 Previous
               </button>
               <button
                 onClick={nextSlide}
-                className="bg-orange-600 text-white px-4 py-2 rounded-full hover:bg-orange-700 transition-colors"
+                className="bg-orange-500 text-gray-900 px-4 py-2 rounded-full hover:bg-orange-600 transition-colors"
                 disabled={currentSlide === totalSlides - 1}
               >
                 Next

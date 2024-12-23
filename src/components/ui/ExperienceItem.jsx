@@ -11,10 +11,11 @@ const ExperienceItem = ({ experience, isEven }) => (
     className={`relative flex items-center ${
       isEven ? "md:flex-row" : "md:flex-row-reverse"
     }`}
+    style={{ padding: "0px 0px 0px 35px" }}
   >
     {/* Content */}
     <div
-      className={`md:w-1/2 w-full ${
+      className={`md:w-1/2 w-full  ${
         isEven ? "md:pr-8 text-right" : "md:pl-8 text-left"
       }`}
     >

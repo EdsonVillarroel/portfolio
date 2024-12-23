@@ -1,10 +1,10 @@
 import { cloneElement } from "react";
 import {
-    FaFacebookSquare,
-    FaGithub,
-    FaInstagram,
-    FaLinkedin,
-    FaTwitter,
+  FaFacebookSquare,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
 } from "react-icons/fa";
 
 const Footer = () => {
@@ -12,19 +12,27 @@ const Footer = () => {
     {
       href: "https://www.facebook.com/edsito.villarroelricaldes",
       icon: <FaFacebookSquare />,
+      ariaLabel: "FaFacebookSquare icon",
     },
     {
       href: "https://www.linkedin.com/in/edsonvillarroelricaldes/",
       icon: <FaLinkedin />,
+      ariaLabel: "FaLinkedin icon",
     },
-    { href: "https://twitter.com", icon: <FaTwitter /> },
+    {
+      href: "https://twitter.com",
+      icon: <FaTwitter />,
+      ariaLabel: "FaTwitter icon",
+    },
     {
       href: "https://www.instagram.com/edson_villarroel_ricaldes/",
       icon: <FaInstagram />,
+      ariaLabel: "FaInstagram icon",
     },
     {
       href: "https://github.com/EdsonVillarroel",
       icon: <FaGithub />,
+      ariaLabel: "FaGithub icon",
     },
   ];
 
