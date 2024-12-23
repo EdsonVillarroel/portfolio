@@ -20,6 +20,7 @@ const Header = () => {
       <div
         className="relative flex items-center justify-center h-full bg-cover bg-center bg-fixed"
         style={{ backgroundImage: `url(${capyBackground})` }}
+        loading="lazy"
       >
         <button
           onClick={toggleDarkMode}
@@ -42,6 +43,7 @@ const Header = () => {
           <div
             className="w-48 h-48 mx-auto mb-8 rounded-full bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${userProfile})` }}
+            loading="lazy"
           ></div>
 
           <TypingEffect />
@@ -55,27 +57,36 @@ const Header = () => {
               {
                 href: "https://www.facebook.com/edsito.villarroelricaldes",
                 icon: <FaFacebookSquare />,
+                ariaLabel: "Facebook icon",
               },
               {
                 href: "https://www.linkedin.com/in/edsonvillarroelricaldes/",
                 icon: <FaLinkedin />,
+                ariaLabel: "Linkedin icon",
               },
-              { href: "https://twitter.com", icon: <FaTwitter /> },
+              {
+                href: "https://twitter.com",
+                icon: <FaTwitter />,
+                ariaLabel: "Twitter icon",
+              },
               {
                 href: "https://www.instagram.com/edson_villarroel_ricaldes/",
                 icon: <FaInstagram />,
+                ariaLabel: "Instagram icon",
               },
               {
                 href: "https://github.com/EdsonVillarroel",
                 icon: <FaGithub />,
+                ariaLabel: "Github icon",
               },
-            ].map(({ href, icon }, index) => (
+            ].map(({ href, icon, ariaLabel }, index) => (
               <li key={index}>
                 <a
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white hover:text-yellow-400 transition duration-300"
+                  aria-label={ariaLabel}
                 >
                   {cloneElement(icon, { size: "2rem" })}
                 </a>

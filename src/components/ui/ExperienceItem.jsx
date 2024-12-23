@@ -19,9 +19,9 @@ const ExperienceItem = ({ experience, isEven }) => (
       }`}
     >
       <div className="space-y-2">
-        <h4 className="text-xl font-semibold text-orange-600 dark:text-orange-400">
+        <h3 className="text-xl font-semibold text-orange-600 dark:text-orange-400">
           {experience.title}
-        </h4>
+        </h3>
         <div className="text-lg text-gray-600 dark:text-gray-300">
           {experience.company}
         </div>
