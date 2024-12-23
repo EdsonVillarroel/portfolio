@@ -46,13 +46,14 @@ const Footer = () => {
           </p>
 
           <ul className="flex space-x-6">
-            {socialLinks.map(({ href, icon }, index) => (
+            {socialLinks.map(({ href, icon, ariaLabel }, index) => (
               <li key={index}>
                 <a
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-800 dark:text-gray-300 hover:text-yellow-500 dark:hover:text-yellow-400 transition duration-300"
+                  aria-label={ariaLabel}
                 >
                   {cloneElement(icon, { size: "1.5rem" })}
                 </a>

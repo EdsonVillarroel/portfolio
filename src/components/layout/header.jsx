@@ -23,6 +23,7 @@ const Header = () => {
         loading="lazy"
       >
         <button
+          aria-label="toggleDarkMode"
           onClick={toggleDarkMode}
           className={`absolute top-4 right-4 z-20 p-2 rounded-full transition duration-300 transform hover:scale-105 ${
             isDarkMode
