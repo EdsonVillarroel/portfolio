@@ -38,7 +38,7 @@ const Header = () => {
           )}
         </button>
 
-        <div className="absolute inset-0 bg-gradient-to-b from-orange-400 to-orange-200 opacity-90"></div>
+        <div className="absolute inset-0  dark:bg-gradient-to-b dark:from-gray-900 dark:to-gray-700 bg-gradient-to-b from-orange-400 to-orange-200 opacity-90 "></div>
 
         <div className="relative z-10 text-center">
           <div
