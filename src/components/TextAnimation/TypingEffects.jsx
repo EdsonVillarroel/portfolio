@@ -1,10 +1,12 @@
 import "./TypingEffect.css";
 const TypingEffects = () => {
-  return (
-    <div className="typing-effect-container">
-      <span className="typing-effect"></span>
-    </div>
-  );
+
+    return (
+        <div className="typing-effect-container">
+            <span className="typing-effect" />
+        </div>
+    );
+
 };
 
 export default TypingEffects;
