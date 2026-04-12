@@ -158,7 +158,7 @@ const Header = () => {
                                 href={href}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-white/50 hover:text-orange-400 transition-all duration-300 hover:scale-110 block"
+                                className="text-white/80 hover:text-orange-400 transition-all duration-300 hover:scale-110 block"
                                 aria-label={label}
                             >
                                 {cloneElement(icon, {"size": "1.4rem"})}

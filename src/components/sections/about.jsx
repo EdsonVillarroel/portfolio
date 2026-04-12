@@ -10,7 +10,7 @@ const stats = [
 
 const personalInfo = [
     { icon: <FaPhone />, label: "Celular", value: "+591 73690866", href: "tel:+59173690866" },
-    { icon: <FaEnvelope />, label: "Correo", value: "villarroel@gmail.com", href: "mailto:villarroel@gmail.com" },
+    { icon: <FaEnvelope />, label: "Correo", value: "villarroel.dev@gmail.com", href: "mailto:villarroel.dev@gmail.com" },
     { icon: <FaMapMarkerAlt />, label: "Ubicación", value: "Santa Cruz de la Sierra, Bolivia" },
     { icon: <FaLinkedin />, label: "LinkedIn", value: "edsonvillarroelricaldes", href: "https://www.linkedin.com/in/edsonvillarroelricaldes/" },
     { icon: <FaGithub />, label: "GitHub", value: "EdsonVillarroel", href: "https://github.com/EdsonVillarroel" },
@@ -183,7 +183,7 @@ const About = () => (
                     {/* CTA */}
                     <div className="mt-8">
                         <a
-                            href="mailto:villarroel@gmail.com"
+                            href="mailto:villarroel.dev@gmail.com"
                             className="flex items-center justify-center gap-2 w-full py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/25 text-sm"
                         >
                             Enviar un mensaje

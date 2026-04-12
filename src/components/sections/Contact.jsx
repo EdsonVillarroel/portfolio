@@ -5,8 +5,8 @@ const contactMethods = [
     {
         icon: <FaEnvelope />,
         label: "Email",
-        value: "villarroel@gmail.com",
-        href: "mailto:villarroel@gmail.com",
+        value: "villarroel.dev@gmail.com",
+        href: "mailto:villarroel.dev@gmail.com",
         description: "Respondo en menos de 24 horas",
     },
     {
@@ -97,7 +97,7 @@ const Contact = () => (
                             </p>
                         </div>
                         <a
-                            href="mailto:villarroel@gmail.com"
+                            href="mailto:villarroel.dev@gmail.com"
                             className="mt-6 inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-orange-600 font-bold rounded-xl hover:bg-orange-50 transition-all duration-300 hover:scale-105 text-sm shadow-sm"
                         >
                             <FaEnvelope />
