@@ -1,32 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 body {
   margin: 0;
-  /* font-family: "Space Mono", Arial, serif;
-  font-family: "Space Mono", Arial, serif; */
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
-  color: #4d4d4d;
+  color: #374151;
   background: #fff;
 }
 
-code {
-  /* font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace; */
-    font-family: 'Open Sans', sans-serif;
+html {
+  scroll-behavior: smooth;
 }
+
+code {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 144, 0, 0.9);
+  background-color: rgba(249, 115, 22, 0.5);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(255, 144, 0, 1);
+  background-color: rgba(249, 115, 22, 0.9);
 }

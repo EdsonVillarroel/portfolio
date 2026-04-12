@@ -1,6 +1,7 @@
 import { useDarkMode } from "context/DarkModeProvider";
 import { cloneElement } from "react";
 import {
+    FaChevronDown,
     FaFacebookSquare,
     FaGithub,
     FaInstagram,
@@ -45,81 +46,130 @@ const Header = () => {
             }
         ],
 
-        handleToggleDarkMode = () => {
-
-            console.log("Toggle dark mode clicked, current mode:", isDarkMode);
-            toggleDarkMode();
-
-        };
+        techStack = ["Angular", "React.js", "Next.js", ".NET", "TypeScript"];
 
     return (
         <div id="home" className="relative w-full h-screen overflow-hidden">
+
+            {/* Background Image */}
             <div
-                className="relative flex items-center justify-center h-full bg-cover bg-center bg-fixed"
+                className="absolute inset-0 bg-cover bg-center"
                 style={{"backgroundImage": `url(${capyBackground})`}}
-                loading="lazy"
+            />
+
+            {/* Dark sophisticated overlay */}
+            <div className="absolute inset-0 bg-gradient-to-b from-slate-900/92 via-slate-900/80 to-slate-900/95" />
+
+            {/* Orange accent stripe at top */}
+            <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-orange-500 to-transparent" />
+
+            {/* Dark Mode Toggle */}
+            <button
+                aria-label="Toggle dark mode"
+                onClick={toggleDarkMode}
+                className="absolute top-6 right-6 z-50 p-3 rounded-full transition-all duration-300 hover:scale-110 shadow-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20"
             >
-                {/* Dark Mode Toggle */}
-                <button
-                    aria-label="Toggle dark mode"
-                    onClick={handleToggleDarkMode}
-                    className={`absolute top-6 right-6 z-50 p-3 rounded-full transition duration-300 transform hover:scale-105 shadow-lg ${
-                        isDarkMode
-                            ? "bg-gray-800 text-yellow-400 hover:bg-gray-700"
-                            : "bg-white text-gray-800 hover:bg-gray-100"
-                    }`}
-                >
-                    {!isDarkMode ? (
-                        <FaSun size={20} />
-                    ) : (
-                        <FaMoon size={20} />
-                    )}
-                </button>
+                {!isDarkMode ? (
+                    <FaSun size={18} />
+                ) : (
+                    <FaMoon size={18} />
+                )}
+            </button>
 
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-b from-orange-400/90 to-orange-200/90" />
+            {/* Main Content */}
+            <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 pb-16">
 
-                {/* Content */}
-                <div className="relative z-10 text-center px-4">
-                    {/* Profile Image */}
-                    <div className="mb-8">
-                        <div
-                            className="w-32 h-32 mx-auto rounded-full bg-cover bg-center bg-no-repeat border-4 border-white shadow-2xl"
-                            style={{"backgroundImage": `url(${userProfile})`}}
-                            loading="lazy"
-                        />
-                    </div>
-
-                    {/* Typing Effect */}
-                    <TypingEffect />
-
-                    {/* Title */}
-                    <h3 className="text-2xl text-white font-semibold mt-6 mb-2">
-            Desarrollador Frontend
-                    </h3>
-
-                    {/* Subtitle */}
-                    <p className="text-lg text-white/90 font-medium mb-8">
-            Angular • React.js • Next.js • JavaScript
-                    </p>
-
-                    {/* Social Links */}
-                    <ul className="flex justify-center space-x-6">
-                        {socialLinks.map(({href, icon, label}, index) => (
-                            <li key={index}>
-                                <a
-                                    href={href}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-white hover:text-orange-300 transition duration-300 transform hover:scale-110"
-                                    aria-label={label}
-                                >
-                                    {cloneElement(icon, {"size": "1.75rem"})}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
+                {/* Availability Badge */}
+                <div className="mb-8 inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white/90 text-sm font-medium">
+                    <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse shadow-sm shadow-green-400" />
+                    Disponible para nuevas oportunidades
                 </div>
+
+                {/* Profile Image */}
+                <div className="mb-7 relative">
+                    <div className="relative w-36 h-36 md:w-40 md:h-40">
+                        {/* Animated ring */}
+                        <div className="absolute inset-0 rounded-full ring-2 ring-orange-400/40 animate-pulse-ring" />
+                        {/* Profile photo */}
+                        <div
+                            className="w-full h-full rounded-full bg-cover bg-center bg-no-repeat ring-3 ring-orange-400 ring-offset-3 ring-offset-slate-900 shadow-2xl shadow-orange-500/20"
+                            style={{"backgroundImage": `url(${userProfile})`, "ringWidth": "3px"}}
+                        />
+                        {/* Decorative border */}
+                        <div className="absolute inset-0 rounded-full border-3 border-orange-400/80" style={{"border": "3px solid rgba(249,115,22,0.8)"}} />
+                    </div>
+                </div>
+
+                {/* Typing Effect Name */}
+                <TypingEffect />
+
+                {/* Role */}
+                <p className="text-xl md:text-2xl text-white/90 font-semibold -mt-4 mb-3 tracking-wide">
+                    Full Stack Developer
+                </p>
+
+                {/* Divider */}
+                <div className="w-12 h-0.5 bg-orange-500 mb-5" />
+
+                {/* Tech stack pills */}
+                <div className="flex flex-wrap justify-center gap-2 mb-8 max-w-lg">
+                    {techStack.map((tech) => (
+                        <span
+                            key={tech}
+                            className="px-3 py-1 bg-white/8 backdrop-blur-sm border border-white/15 rounded-full text-white/75 text-xs font-medium tracking-wide"
+                            style={{"background": "rgba(255,255,255,0.08)"}}
+                        >
+                            {tech}
+                        </span>
+                    ))}
+                </div>
+
+                {/* CTA Buttons */}
+                <div className="flex flex-col sm:flex-row gap-3 mb-10">
+                    <a
+                        href="#contact"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            document.querySelector("#contact")?.scrollIntoView({"behavior": "smooth"});
+                        }}
+                        className="px-7 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/30 text-sm"
+                    >
+                        Contáctame
+                    </a>
+                    <a
+                        href="#experience"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            document.querySelector("#experience")?.scrollIntoView({"behavior": "smooth"});
+                        }}
+                        className="px-7 py-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/25 text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 text-sm"
+                    >
+                        Ver Experiencia
+                    </a>
+                </div>
+
+                {/* Social Links */}
+                <ul className="flex justify-center space-x-5">
+                    {socialLinks.map(({href, icon, label}, index) => (
+                        <li key={index}>
+                            <a
+                                href={href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-white/50 hover:text-orange-400 transition-all duration-300 hover:scale-110 block"
+                                aria-label={label}
+                            >
+                                {cloneElement(icon, {"size": "1.4rem"})}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+
+            {/* Scroll Indicator */}
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-white/40 text-xs">
+                <span className="tracking-widest uppercase text-[10px]">Scroll</span>
+                <FaChevronDown className="animate-scroll-down" size={12} />
             </div>
         </div>
     );

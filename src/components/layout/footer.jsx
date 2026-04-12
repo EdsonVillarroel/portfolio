@@ -1,10 +1,10 @@
 import { cloneElement } from "react";
 import {
-  FaFacebookSquare,
-  FaGithub,
-  FaInstagram,
-  FaLinkedin,
-  FaTwitter
+    FaFacebookSquare,
+    FaGithub,
+    FaInstagram,
+    FaLinkedin,
+    FaTwitter
 } from "react-icons/fa";
 
 const Footer = () => {
@@ -13,50 +13,62 @@ const Footer = () => {
         {
             "href": "https://www.facebook.com/edsito.villarroelricaldes",
             "icon": <FaFacebookSquare />,
-            "ariaLabel": "FaFacebookSquare icon"
+            "ariaLabel": "Facebook"
         },
         {
             "href": "https://www.linkedin.com/in/edsonvillarroelricaldes/",
             "icon": <FaLinkedin />,
-            "ariaLabel": "FaLinkedin icon"
+            "ariaLabel": "LinkedIn"
         },
         {
             "href": "https://twitter.com",
             "icon": <FaTwitter />,
-            "ariaLabel": "FaTwitter icon"
+            "ariaLabel": "Twitter"
         },
         {
             "href": "https://www.instagram.com/edson_villarroel_ricaldes/",
             "icon": <FaInstagram />,
-            "ariaLabel": "FaInstagram icon"
+            "ariaLabel": "Instagram"
         },
         {
             "href": "https://github.com/EdsonVillarroel",
             "icon": <FaGithub />,
-            "ariaLabel": "FaGithub icon"
+            "ariaLabel": "GitHub"
         }
     ];
 
     return (
-        <footer className="w-full bg-gradient-to-b from-white dark:from-gray-800 dark:to-gray-900 py-6">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex flex-col md:flex-row justify-between items-center">
-                    <p className="text-sm text-gray-800 dark:text-gray-300 mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} Edson Villarroel Ricaldes. All
-            rights reserved.
+        <footer className="w-full bg-slate-900 dark:bg-slate-950 py-8 border-t border-slate-800">
+            <div className="max-w-6xl mx-auto px-4">
+                <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+
+                    {/* Brand */}
+                    <div className="flex items-center gap-2">
+                        <span className="w-7 h-7 rounded-full bg-orange-500 flex items-center justify-center text-white text-xs font-bold">
+                            EV
+                        </span>
+                        <span className="text-white/70 text-sm">
+                            Edson Villarroel Ricaldes
+                        </span>
+                    </div>
+
+                    {/* Copyright */}
+                    <p className="text-slate-500 text-xs">
+                        &copy; {new Date().getFullYear()} · Todos los derechos reservados
                     </p>
 
-                    <ul className="flex space-x-6">
+                    {/* Social Links */}
+                    <ul className="flex items-center space-x-4">
                         {socialLinks.map(({href, icon, ariaLabel}, index) => (
                             <li key={index}>
                                 <a
                                     href={href}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-gray-800 dark:text-gray-300 hover:text-yellow-500 dark:hover:text-yellow-400 transition duration-300"
+                                    className="text-slate-500 hover:text-orange-400 transition-all duration-300 hover:scale-110 block"
                                     aria-label={ariaLabel}
                                 >
-                                    {cloneElement(icon, {"size": "1.5rem"})}
+                                    {cloneElement(icon, {"size": "1.1rem"})}
                                 </a>
                             </li>
                         ))}
