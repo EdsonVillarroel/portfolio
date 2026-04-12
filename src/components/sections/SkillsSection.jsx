@@ -17,12 +17,11 @@ const skillCategories = [
     {
         title: "Frontend",
         color: "blue",
-        borderColor: "border-blue-200 dark:border-blue-800/40",
         badgeColor: "bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400",
         skills: [
             { name: "Angular", icon: SiAngular, color: "text-red-500" },
             { name: "React", icon: FaReact, color: "text-blue-500" },
-            { name: "Next.js", icon: SiNextdotjs, color: "text-gray-800 dark:text-white" },
+            { name: "Next.js", icon: SiNextdotjs, color: "text-slate-700 dark:text-slate-200" },
             { name: "JavaScript", icon: SiJavascript, color: "text-yellow-400" },
             { name: "TypeScript", icon: SiTypescript, color: "text-blue-600" },
             { name: "HTML5", icon: FaHtml5, color: "text-orange-500" },
@@ -33,7 +32,6 @@ const skillCategories = [
     {
         title: "Backend & BD",
         color: "green",
-        borderColor: "border-green-200 dark:border-green-800/40",
         badgeColor: "bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400",
         skills: [
             { name: ".NET", icon: SiDotnet, color: "text-purple-600" },
@@ -44,7 +42,6 @@ const skillCategories = [
     {
         title: "Herramientas",
         color: "orange",
-        borderColor: "border-orange-200 dark:border-orange-800/40",
         badgeColor: "bg-orange-50 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400",
         skills: [
             { name: "Redux", icon: SiRedux, color: "text-purple-600" },
@@ -120,9 +117,7 @@ const SkillsSection = () => (
                             <span className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${category.badgeColor}`}>
                                 {category.title}
                             </span>
-                            <div className={`flex-1 h-px bg-gradient-to-r ${category.borderColor} border-0`}
-                                style={{ background: "linear-gradient(to right, currentColor, transparent)", opacity: 0.3 }}
-                            />
+                            <div className="flex-1 h-px bg-gray-200 dark:bg-slate-700" />
                         </div>
 
                         {/* Skills Grid */}

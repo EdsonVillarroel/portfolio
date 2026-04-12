@@ -3,7 +3,7 @@ import LanguageIcon from "./LanguageIcon";
 import TechnologyIcon from "./TechnologyIcon";
 
 const RepositoryItem = ({repo}) => (
-    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl">
+    <div className="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-gray-100 dark:border-slate-700 p-6 transition-all duration-300 hover:shadow-md hover:border-orange-200 dark:hover:border-orange-800/50">
         <div className="flex items-start justify-between mb-4">
             <a
                 href={repo.html_url}

@@ -88,15 +88,17 @@ const Header = () => {
                 {/* Profile Image */}
                 <div className="mb-7 relative">
                     <div className="relative w-36 h-36 md:w-40 md:h-40">
-                        {/* Animated ring */}
-                        <div className="absolute inset-0 rounded-full ring-2 ring-orange-400/40 animate-pulse-ring" />
-                        {/* Profile photo */}
+                        {/* Animated outer ring */}
                         <div
-                            className="w-full h-full rounded-full bg-cover bg-center bg-no-repeat ring-3 ring-orange-400 ring-offset-3 ring-offset-slate-900 shadow-2xl shadow-orange-500/20"
-                            style={{"backgroundImage": `url(${userProfile})`, "ringWidth": "3px"}}
+                            className="absolute -inset-2 rounded-full animate-pulse-ring"
+                            style={{"border": "2px solid rgba(249,115,22,0.35)"}}
                         />
-                        {/* Decorative border */}
-                        <div className="absolute inset-0 rounded-full border-3 border-orange-400/80" style={{"border": "3px solid rgba(249,115,22,0.8)"}} />
+                        {/* Profile photo with ring */}
+                        <img
+                            src={userProfile}
+                            alt="Edson Villarroel"
+                            className="w-full h-full rounded-full object-cover ring-4 ring-orange-400 ring-offset-4 ring-offset-slate-900 shadow-2xl"
+                        />
                     </div>
                 </div>
 
@@ -116,8 +118,8 @@ const Header = () => {
                     {techStack.map((tech) => (
                         <span
                             key={tech}
-                            className="px-3 py-1 bg-white/8 backdrop-blur-sm border border-white/15 rounded-full text-white/75 text-xs font-medium tracking-wide"
-                            style={{"background": "rgba(255,255,255,0.08)"}}
+                            className="px-3 py-1 backdrop-blur-sm border border-white/20 rounded-full text-white/75 text-xs font-medium tracking-wide"
+                            style={{"background": "rgba(255,255,255,0.1)"}}
                         >
                             {tech}
                         </span>
