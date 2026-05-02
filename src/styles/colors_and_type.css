@@ -1,0 +1,352 @@
+/* ============================================================
+   EDSON VILLARROEL — Colors & Type
+   Source of truth: derived from EdsonVillarroel/portfolio
+   (Tailwind 3.4 utilities + globals + Helmet meta theme-color)
+   ============================================================ */
+
+/* --- Webfonts (Google) ---------------------------------------
+   The portfolio loads Kaushan Script + Space Mono via Google CDN
+   in public/index.html. Kept on CDN here. Inter is the de-facto
+   body face per the original README "Font Stack" comment.
+*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Kaushan+Script&family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  /* ============================================================
+     COLOR — Brand
+     One brand hue: Tailwind orange (#f97316 = orange-500). Used
+     for the meta theme-color, every accent border / underline,
+     all primary CTAs, the EV monogram, the orange→orange CTA card.
+     ============================================================ */
+  --brand-orange-50:  #fff7ed;
+  --brand-orange-100: #ffedd5;
+  --brand-orange-200: #fed7aa;
+  --brand-orange-300: #fdba74;
+  --brand-orange-400: #fb923c;
+  --brand-orange-500: #f97316; /* primary — meta theme-color */
+  --brand-orange-600: #ea580c;
+  --brand-orange-700: #c2410c;
+  --brand-orange-800: #9a3412;
+  --brand-orange-900: #7c2d12;
+
+  /* ============================================================
+     COLOR — Neutrals
+     Two parallel ramps:
+       - gray ramp for light-mode surfaces & body copy
+       - slate ramp for dark-mode surfaces (portfolio hero overlay
+         is slate-900 over the capybara backdrop)
+     ============================================================ */
+  --gray-50:  #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+
+  --slate-50:  #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
+  --slate-950: #020617;
+
+  /* ============================================================
+     COLOR — Semantic
+     "Available" green pulse on the hero badge,
+     "Actual" green role tag,
+     "starred" yellow on repos.
+     ============================================================ */
+  --status-online:  #4ade80;  /* green-400 — availability dot */
+  --status-success: #22c55e;
+  --status-warn:    #facc15;  /* yellow-400 — repo stars */
+  --status-error:   #ef4444;
+
+  /* ============================================================
+     COLOR — Skill icon palette
+     Verbatim from SkillsSection.jsx (text-* utilities). These are
+     fixed brand colors of each technology, not site theme tokens.
+     ============================================================ */
+  --tech-angular:    #ef4444; /* red-500 */
+  --tech-react:      #3b82f6; /* blue-500 */
+  --tech-nextjs:     #334155; /* slate-700 (light) */
+  --tech-js:         #facc15; /* yellow-400 */
+  --tech-ts:         #2563eb; /* blue-600 */
+  --tech-html:       #f97316; /* orange-500 */
+  --tech-css:        #60a5fa; /* blue-400 */
+  --tech-tailwind:   #22d3ee; /* cyan-400 */
+  --tech-dotnet:     #9333ea; /* purple-600 */
+  --tech-node:       #22c55e; /* green-500 */
+  --tech-mongo:      #22c55e;
+  --tech-redux:      #9333ea;
+  --tech-git:        #ea580c; /* orange-600 */
+  --tech-docker:     #3b82f6;
+
+  /* ============================================================
+     COLOR — Semantic surface tokens
+     LIGHT MODE defaults. Overridden by [data-theme="dark"] below.
+     ============================================================ */
+  --bg-page:        var(--gray-50);     /* App.jsx: bg-gray-50 */
+  --bg-section:     #ffffff;            /* about: bg-white */
+  --bg-section-alt: var(--gray-50);     /* contact: bg-gray-50 */
+  --bg-card:        #ffffff;
+  --bg-card-soft:   var(--gray-50);     /* nested cards on white sections */
+  --bg-tag:         var(--brand-orange-50);
+  --bg-overlay:     rgba(15, 23, 42, 0.92); /* slate-900/92 hero overlay */
+
+  --fg-1: var(--gray-900);              /* headlines */
+  --fg-2: var(--gray-700);              /* body strong */
+  --fg-3: var(--gray-600);              /* body */
+  --fg-4: var(--gray-500);              /* muted */
+  --fg-5: var(--gray-400);              /* hint / labels */
+
+  --accent:        var(--brand-orange-500);
+  --accent-hover:  var(--brand-orange-600);
+  --accent-soft:   var(--brand-orange-50);
+  --accent-text:   var(--brand-orange-600); /* "Actual" link color */
+
+  --border-1: var(--gray-100);          /* card border */
+  --border-2: var(--gray-200);          /* divider */
+  --border-accent: var(--brand-orange-200);
+
+  /* ============================================================
+     SHADOW — soft elevation, with an orange-tinted CTA shadow
+     ============================================================ */
+  --shadow-sm:    0 1px 2px 0 rgba(0,0,0,0.05);
+  --shadow-md:    0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -2px rgba(0,0,0,0.06);
+  --shadow-lg:    0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -4px rgba(0,0,0,0.05);
+  --shadow-xl:    0 20px 25px -5px rgba(0,0,0,0.10), 0 8px 10px -6px rgba(0,0,0,0.06);
+  --shadow-2xl:   0 25px 50px -12px rgba(0,0,0,0.25);
+  --shadow-cta:   0 10px 15px -3px rgba(249, 115, 22, 0.25); /* hover:shadow-orange-500/25 */
+
+  /* ============================================================
+     RADIUS — Tailwind defaults; cards use 1rem (rounded-2xl)
+     ============================================================ */
+  --radius-sm:   0.375rem;  /* 6  */
+  --radius-md:   0.5rem;    /* 8  — buttons */
+  --radius-lg:   0.75rem;   /* 12 — small cards, tags */
+  --radius-xl:   1rem;      /* 16 */
+  --radius-2xl:  1rem;      /* 16 — primary card radius */
+  --radius-full: 9999px;    /* pills, avatars, monogram */
+
+  /* ============================================================
+     SPACING — Tailwind 4px scale (showing the rungs we actually use)
+     ============================================================ */
+  --space-1: 0.25rem;   /* 4  */
+  --space-2: 0.5rem;    /* 8  */
+  --space-3: 0.75rem;   /* 12 */
+  --space-4: 1rem;      /* 16 */
+  --space-5: 1.25rem;   /* 20 */
+  --space-6: 1.5rem;    /* 24 */
+  --space-8: 2rem;      /* 32 */
+  --space-10: 2.5rem;   /* 40 */
+  --space-12: 3rem;     /* 48 */
+  --space-16: 4rem;     /* 64 */
+  --space-24: 6rem;     /* 96 — section py-24 */
+
+  /* ============================================================
+     LAYOUT — page-level constants
+     ============================================================ */
+  --container-max:      72rem;   /* max-w-6xl */
+  --container-narrow:   64rem;   /* max-w-5xl — used by skills/contact/work */
+  --section-py:         var(--space-24);
+  --nav-height:         4rem;    /* h-16 */
+
+  /* ============================================================
+     TYPE — Families
+     - Sans: Inter (body / UI). Tailwind has no Google Inter import
+       in the portfolio, but the README documents it as the stack
+       and the build picks up system Inter where available.
+     - Display script: Kaushan Script (typing-effect signature only)
+     - Mono: Space Mono (loaded but unused in portfolio body — kept
+       available for code snippets in this design system)
+     ============================================================ */
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               Helvetica, Arial, sans-serif;
+  --font-script: "Kaushan Script", cursive;
+  --font-mono: "Space Mono", "SF Mono", "Menlo", monospace;
+
+  /* ============================================================
+     TYPE — Sizes (Tailwind text-* tokens)
+     ============================================================ */
+  --text-2xs:    0.6875rem; /* 11 — micro labels: "ESPECIALIDADES", contact label */
+  --text-xs:     0.75rem;   /* 12 — tag pills, dates */
+  --text-sm:     0.875rem;  /* 14 — body paragraph in cards */
+  --text-base:   1rem;      /* 16 — default body */
+  --text-lg:     1.125rem;  /* 18 — sub-heading */
+  --text-xl:     1.25rem;   /* 20 — hero role */
+  --text-2xl:    1.5rem;    /* 24 — CTA card title */
+  --text-3xl:    1.875rem;  /* 30 — stat number */
+  --text-4xl:    2.25rem;   /* 36 — section title (mobile) */
+  --text-5xl:    3rem;      /* 48 — section title (md+) */
+
+  /* ============================================================
+     TYPE — Weight & line-height
+     ============================================================ */
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+  --weight-extrabold:800;
+
+  --leading-tight:   1.15;
+  --leading-snug:    1.35;
+  --leading-normal:  1.5;
+  --leading-relaxed: 1.65;
+
+  --tracking-tight:  -0.01em;
+  --tracking-normal: 0;
+  --tracking-wide:   0.04em;
+  --tracking-widest: 0.18em; /* eyebrow uppercase labels */
+}
+
+/* ===== DARK MODE (matches `darkMode: "class"` from tailwind.config) ===== */
+:root[data-theme="dark"],
+.dark {
+  --bg-page:        var(--slate-900);
+  --bg-section:     var(--slate-900);
+  --bg-section-alt: var(--slate-800);
+  --bg-card:        var(--slate-900);
+  --bg-card-soft:   var(--slate-800);
+  --bg-tag:         rgba(154, 52, 18, 0.20);   /* orange-900/20 */
+
+  --fg-1: #ffffff;
+  --fg-2: var(--slate-100);
+  --fg-3: var(--slate-300);
+  --fg-4: var(--slate-400);
+  --fg-5: var(--slate-500);
+
+  --accent-text: #fb923c; /* orange-400 in dark for AA contrast */
+
+  --border-1: var(--slate-700);
+  --border-2: var(--slate-700);
+  --border-accent: rgba(154, 52, 18, 0.50);
+}
+
+/* ============================================================
+   SEMANTIC TYPE — drop-in classes used by HTML cards & UI kits
+   Maps directly onto the patterns observed in the portfolio.
+   ============================================================ */
+
+.ev-eyebrow {
+  font: var(--weight-semibold) var(--text-sm) / var(--leading-snug) var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-widest);
+  color: var(--accent);
+  margin: 0 0 var(--space-3);
+}
+
+/* "Sobre Mí" / "Contacto" / "Habilidades Técnicas" */
+.ev-h1 {
+  font: var(--weight-bold) var(--text-5xl) / var(--leading-tight) var(--font-sans);
+  color: var(--fg-1);
+  letter-spacing: var(--tracking-tight);
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .ev-h1 { font-size: var(--text-4xl); }
+}
+
+/* Card titles — "Presentación", "Información de Contacto" */
+.ev-h2 {
+  font: var(--weight-semibold) var(--text-lg) / var(--leading-snug) var(--font-sans);
+  color: var(--fg-1);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: 0;
+}
+.ev-h2::before {
+  content: "";
+  width: 4px; height: 20px;
+  background: var(--accent);
+  border-radius: var(--radius-full);
+}
+
+/* CTA card title — "¡Trabajemos Juntos!" */
+.ev-h3 {
+  font: var(--weight-bold) var(--text-2xl) / var(--leading-tight) var(--font-sans);
+  margin: 0;
+}
+
+/* Body paragraph (in cards) */
+.ev-p {
+  font: var(--weight-regular) var(--text-sm) / var(--leading-relaxed) var(--font-sans);
+  color: var(--fg-3);
+  margin: 0;
+}
+.ev-p strong { color: var(--fg-1); font-weight: var(--weight-semibold); }
+.ev-p em     { color: var(--fg-2); font-style: italic; }
+
+/* Big stat number — "4+", "100%" */
+.ev-stat {
+  font: var(--weight-bold) var(--text-3xl) / 1 var(--font-sans);
+  color: var(--accent);
+}
+@media (min-width: 768px) {
+  .ev-stat { font-size: var(--text-4xl); }
+}
+
+/* Micro label above contact methods */
+.ev-label-micro {
+  font: var(--weight-semibold) var(--text-2xs) / 1 var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  color: var(--fg-5);
+}
+
+/* Tag pill — specialties, tech tags, "Actual" badge */
+.ev-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font: var(--weight-medium) var(--text-xs) / 1 var(--font-sans);
+  color: var(--fg-3);
+  background: var(--bg-card);
+  border: 1px solid var(--border-2);
+  transition: color .2s ease, border-color .2s ease;
+}
+.ev-tag:hover { color: var(--accent-text); border-color: var(--brand-orange-400); }
+.ev-tag--accent {
+  background: var(--accent-soft);
+  color: var(--brand-orange-700);
+  border-color: var(--brand-orange-100);
+  font-weight: var(--weight-semibold);
+}
+
+/* Code / mono */
+.ev-code {
+  font: var(--weight-regular) 0.9em / 1.4 var(--font-mono);
+  background: var(--bg-card-soft);
+  color: var(--fg-2);
+  padding: 0.1em 0.4em;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-1);
+}
+
+/* Signature script — used ONCE in the hero typing effect */
+.ev-script {
+  font-family: var(--font-script);
+  color: #ffffff;
+  transform: rotate(-5deg);
+  display: inline-block;
+}
+
+/* Divider rule — the 12px orange line under section headers */
+.ev-divider {
+  width: 3rem;
+  height: 4px;
+  background: var(--accent);
+  border-radius: var(--radius-full);
+  margin: var(--space-3) auto 0;
+}

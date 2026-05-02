@@ -12,7 +12,6 @@ import {
 } from "react-icons/fa";
 import capyBackground from "../../assets/imgs/capyWeb.webp";
 import userProfile from "../../assets/imgs/user-3.webp";
-import TypingEffect from "../ui/TypingEffect";
 
 const Header = () => {
 
@@ -102,11 +101,13 @@ const Header = () => {
                     </div>
                 </div>
 
-                {/* Typing Effect Name */}
-                <TypingEffect />
+                {/* Name */}
+                <h1 className="font-bold text-white text-2xl md:text-4xl mb-3 whitespace-nowrap tracking-tight">
+                    Edson Villarroel Ricaldes
+                </h1>
 
                 {/* Role */}
-                <p className="text-xl md:text-2xl text-white/90 font-semibold -mt-4 mb-3 tracking-wide">
+                <p className="text-lg md:text-xl text-white/85 font-medium mb-4 tracking-wide">
                     Full Stack Developer
                 </p>
 

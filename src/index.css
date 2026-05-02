@@ -1,15 +1,18 @@
+@import "./styles/colors_and_type.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.7;
-  color: #374151;
-  background: #fff;
+  font-family: var(--font-sans);
+  font-weight: var(--weight-regular);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--fg-2);
+  background: var(--bg-page);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html {
@@ -17,10 +20,10 @@ html {
 }
 
 code {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-mono);
 }
 
-/* Scrollbar */
+/* Scrollbar — orange-500 thumb per token system */
 ::-webkit-scrollbar {
   width: 6px;
 }

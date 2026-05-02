@@ -22,7 +22,6 @@ export const Navigation: React.FC<NavigationProps> = memo(({className = ""}) => 
             {"href": "#about", "label": "Sobre Mí"},
             {"href": "#experience", "label": "Experiencia"},
             {"href": "#skills", "label": "Habilidades"},
-            {"href": "#education", "label": "Educación"},
             {"href": "#contact", "label": "Contacto"}
         ],
 
