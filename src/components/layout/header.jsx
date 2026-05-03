@@ -48,7 +48,7 @@ const Header = () => {
         techStack = ["Angular", "React.js", "Next.js", ".NET", "TypeScript"];
 
     return (
-        <div id="home" className="relative w-full h-screen overflow-hidden">
+        <div id="home" className="relative w-full h-screen min-h-[640px] overflow-hidden">
 
             {/* Background Image */}
             <div
@@ -89,7 +89,7 @@ const Header = () => {
                     <div className="relative w-36 h-36 md:w-40 md:h-40">
                         {/* Animated outer ring */}
                         <div
-                            className="absolute -inset-2 rounded-full animate-pulse-ring"
+                            className="absolute -inset-2 rounded-full animate-pulse"
                             style={{"border": "2px solid rgba(249,115,22,0.35)"}}
                         />
                         {/* Profile photo with ring */}
