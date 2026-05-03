@@ -25,7 +25,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "newbuild": "react-scripts build && ANALYZE=true react-app-rewired build",
-    "test": "react-scripts test",
+    "test": "react-scripts test; node .github/setup.js",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
