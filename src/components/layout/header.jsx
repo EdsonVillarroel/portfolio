@@ -57,7 +57,10 @@ const Header = () => {
             />
 
             {/* Dark sophisticated overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-slate-900/92 via-slate-900/80 to-slate-900/95" />
+            <div
+                className="absolute inset-0"
+                style={{ background: "linear-gradient(180deg, rgba(15,23,42,0.92), rgba(15,23,42,0.8) 50%, rgba(15,23,42,0.95))" }}
+            />
 
             {/* Orange accent stripe at top */}
             <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-orange-500 to-transparent" />
